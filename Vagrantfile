@@ -12,6 +12,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3001
   config.vm.network "forwarded_port", guest: 9001, host: 9001
   config.ssh.username = "vagrant"
+  # config.ssh.private_key_path = ["~/.vagrant.d/insecure_private_key", "~/.ssh/id_rsa"]
+  #config.ssh.insert_key = true
 
   config.vm.synced_folder "dev/", "/home/vagrant/dev"
 
